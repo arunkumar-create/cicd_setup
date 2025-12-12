@@ -17,7 +17,7 @@ import com.h2h.boot.service.UserDetailsService;
 import jakarta.validation.Valid;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:3000"})
+@CrossOrigin(origins = {"*"})
 @RequestMapping("/userdetails")
 public class UserDetailsController {
 

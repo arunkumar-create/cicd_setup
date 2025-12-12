@@ -75,7 +75,7 @@ const Register = ({ onSelectChange },props) => {
   };
   const checkEmailUniqueness = async (email) => {
     try {
-      const response = await axios.get(`http://localhost:8080/userdetails/check-email/${email}`);
+      const response = await axios.get(`http://backend:8080/userdetails/check-email/${email}`);
       if (response.data) {
         alert('Email is already registered');
         setEmailCheckStatus('Email is already registered');
@@ -212,7 +212,7 @@ const Register = ({ onSelectChange },props) => {
         const isEmailUnique = await checkEmailUniqueness(email);
         if (isEmailUnique) {
           try {
-            const response = await axios.post('http://localhost:8080/userdetails/save', formData);
+            const response = await axios.post('http://backend:8080/userdetails/save', formData);
             if (response.status === 200) {
               alert('Form Submitted Successfully');
             } else {
