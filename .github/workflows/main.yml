@@ -50,7 +50,5 @@ jobs:
           docker compose -f Docker-compose.yml up -d
           sleep 15
 
-      - name: Stop containers
-        if: always()
-        run: docker compose -f Docker-compose.yml down
+      
     
