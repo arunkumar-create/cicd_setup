@@ -58,7 +58,7 @@ jobs:
       # Optional integration test
       - name: Start services for tests
         run: |
-          docker compose -f docker-compose.yml up -d
+          docker compose -f Docker-compose.yml up -d
           sleep 15
 
       - name: Stop services
